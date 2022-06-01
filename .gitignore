@@ -1,0 +1,7 @@
+/.vs/EFCore4WebApi/v16/*.suo
+/AppRespository/obj
+/AppService/obj
+/EFCore4WebApi/obj/Debug/net5.0
+/EFCore4WebApi/obj
+/MysqlRespository/obj/Debug/netstandard2.1
+/MysqlRespository/obj
