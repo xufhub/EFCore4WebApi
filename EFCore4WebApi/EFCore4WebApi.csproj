@@ -4,4 +4,11 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppRespository\AppRespository.csproj" />
+    <ProjectReference Include="..\AppService\AppService.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\MysqlRespository\MysqlRespository.csproj" />
+  </ItemGroup>
+
 </Project>
