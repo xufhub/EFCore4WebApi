@@ -16,8 +16,7 @@ namespace EFCore4WebApi
         }
         public UserEntity GetUserById(int id)
         {
-            return new UserEntity();
-           // return _userRespositoryService.GetUserById(id);
+           return _userRespositoryService.GetUserById(id);
         }
     }
 }

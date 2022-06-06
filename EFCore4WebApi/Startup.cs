@@ -14,8 +14,12 @@ namespace EFCore4WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
+            var configurationBuilder = new ConfigurationBuilder();
+            // configurationBuilder.SetBasePath(env.ContentRootPath).AddJsonFile("appsettings.json", true, true);
+            configurationBuilder.AddJsonFile("/var/webconfig/bol/bol.json", true, true);
+            configuration = configurationBuilder.AddEnvironmentVariables().Build();
             Configuration = configuration;
         }
 
@@ -24,7 +28,7 @@ namespace EFCore4WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddSingleton(Configuration);
             services.AddControllers();
             services.AddCustomService();
         }
