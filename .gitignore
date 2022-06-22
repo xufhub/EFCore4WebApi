@@ -11,5 +11,8 @@ EFCore4WebApi/bin
 EFCore4WebApi/obj
 MysqlRespository/bin
 MysqlRespository/obj
+MongoRespository/bin
+MongoRespository/obj
 .vs/EFCore4WebApi/config/applicationhost.config
 .vs/EFCore4WebApi/DesignTimeBuild/.dtbcache.v2
+*.user
