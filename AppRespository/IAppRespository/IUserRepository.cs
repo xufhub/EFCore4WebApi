@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppRespository
 {
-    public interface IUserRepository<TEntity> : IAppBaseRespository<TEntity>, IAppDenpendency where TEntity : BaseEntity
+    public interface IUserRepository: IAppBaseRespository<UserEntity>, IAppDenpendency
     {
     }
 }

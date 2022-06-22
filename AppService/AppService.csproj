@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppRespository\AppRespository.csproj" />
+    <ProjectReference Include="..\MongoRespository\MongoRespository.csproj" />
   </ItemGroup>
 
   <ItemGroup>

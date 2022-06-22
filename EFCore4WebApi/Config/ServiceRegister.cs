@@ -16,7 +16,8 @@ namespace EFCore4WebApi
             var projectDlls = new string[] { 
                 "AppRespository.dll",
                 "AppService.dll",
-                "EFCore4WebApi.dll"
+                "EFCore4WebApi.dll",
+                "MongoRespository.dll"
             };
             var list = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly).ToList();
 

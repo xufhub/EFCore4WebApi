@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppRespository
 {
-    public class GroupUserRepository<TEntity> : AppBaseRespository<TEntity>, IGroupUserRepository<TEntity> where TEntity : BaseEntity
+    public class GroupUserRepository : AppBaseRespository<GroupUserEntity>, IGroupUserRepository
     {
         private readonly DbContextOptions<DbContext> _dbContext;
         public GroupUserRepository(DbContextOptions<DbContext> options) : base(options)

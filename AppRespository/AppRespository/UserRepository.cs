@@ -7,12 +7,20 @@ using System.Threading.Tasks;
 
 namespace AppRespository
 {
-    public class UserRepository<TEntity> : AppBaseRespository<TEntity>, IUserRepository<TEntity> where TEntity : BaseEntity
+    public class UserRepository : AppBaseRespository<UserEntity>, IUserRepository
     {
         private readonly DbContextOptions<DbContext> _dbContext;
         public UserRepository(DbContextOptions<DbContext> options) : base(options)
         {
             _dbContext = options;
+        }
+
+        public async Task<List<UserEntity>> GetUsers()
+        {
+            var t = from u in Table
+                    where u.State == 2
+                    select u;
+            return await t.ToListAsync();
         }
     }
 }

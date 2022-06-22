@@ -1,6 +1,7 @@
-﻿using Common;
+﻿using AppRespository;
+using Common;
 using Microsoft.Extensions.DependencyInjection;
-using MysqlRespository;
+using MongoRespository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace EFCore4WebApi
         {
             AppSetting.Init(services);
             services.DIMysqlDbContext();
+            services.DIMongoDbContext();
             services.AddServicePack();
         }
     }

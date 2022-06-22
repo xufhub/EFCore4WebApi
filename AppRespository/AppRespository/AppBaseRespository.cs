@@ -21,6 +21,11 @@ namespace AppRespository
             return Table.Where(d => d.Id == id).FirstOrDefault();
         }
 
+        public async Task<List<TEntity>> GetAll()
+        {
+            return await Table.ToListAsync();
+        }
+
         public List<TEntity> GetEntitiesByIds(List<int> ids)
         {
             return Table.Where(d => ids.Contains(d.Id)).ToList();
@@ -64,9 +69,15 @@ namespace AppRespository
             return model;
         }
 
-        //public async Task<List<TEntity>> QueryBySql(string sql, params object[] paramaters)
-        //{
-        //    return await Table.FromSqlRaw(sql, paramaters).ToListAsync();
-        //}
+        public async Task BatchUpdateAsync(List<TEntity> entitys)
+        {
+            Table.UpdateRange(entitys);
+            await SaveChangesAsync();
+        }
+
+        public async Task<List<TEntity>> QueryBySql(string sql, params object[] paramaters)
+        {
+            return await Table.FromSqlRaw(sql, paramaters).ToListAsync();
+        }
     }
 }

@@ -8,7 +8,7 @@
     <ProjectReference Include="..\AppRespository\AppRespository.csproj" />
     <ProjectReference Include="..\AppService\AppService.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\MysqlRespository\MysqlRespository.csproj" />
+    <ProjectReference Include="..\MongoRespository\MongoRespository.csproj" />
   </ItemGroup>
 
 </Project>

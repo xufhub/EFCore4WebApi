@@ -17,5 +17,8 @@ namespace AppRespository
         public Task<long> DeleteByIdAsync(int id);
         public Task<long> DeleteByIdsAsync(List<int> ids);
         public Task<TEntity> UpdateAsync(TEntity entity);
+        public Task<List<TEntity>> QueryBySql(string sql, params object[] paramaters);
+        public Task BatchUpdateAsync(List<TEntity> entitys);
+        public Task<List<TEntity>> GetAll();
     }
 }
